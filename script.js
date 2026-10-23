@@ -121,7 +121,6 @@ function makeTaskElement(task) {
 }
 
 function renderTasks() {
-  function renderTasks() {
   const filter = filterInput.value;
   const search = searchInput.value.trim().toLowerCase();
 
