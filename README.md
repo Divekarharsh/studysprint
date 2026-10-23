@@ -1,167 +1,164 @@
 # StudySprint — Student Task Planner
 
-StudySprint is a responsive student task planner built with HTML, CSS, and JavaScript. It helps students organize study tasks, set subjects and priorities, track completion, and save tasks in the browser.
+StudySprint is a responsive student task planner built using HTML, CSS, and JavaScript. It helps students organize study tasks, set subjects and priorities, track task completion, and save tasks directly in the browser.
 
 ## Objectives
-- Build a useful and responsive website.
-- Practise Git and GitHub version control.
-- Use automated tests to validate core task utilities.
-- Integrate a Jenkins CI pipeline that runs tests after code changes.
+
+- Build a useful and responsive student task planner.
+- Learn Git and GitHub version control.
+- Use automated tests to check core task utilities.
+- Integrate Jenkins for Continuous Integration (CI).
 
 ## Features
-- Add tasks with subject, priority, and optional due date.
+
+- Add tasks with a subject, priority, and optional due date.
 - Mark tasks as complete or incomplete.
-- Delete individual tasks and clear all completed tasks.
-- Filter all, pending, and completed tasks.
-- View task counts and daily completion progress.
-- Persist tasks with browser `localStorage`.
-- Responsive layout for desktop and mobile.
+- Delete individual tasks.
+- Clear all completed tasks.
+- Filter tasks by All, Pending, and Completed.
+- Search and organize study tasks.
+- View task counts and completion progress.
+- Save tasks using browser `localStorage`.
+- Responsive design for desktop and mobile screens.
 
-## Technology stack
-- HTML5
-- CSS3
-- Vanilla JavaScript
-- Node.js built-in test runner
-- Git and GitHub
-- Jenkins Pipeline
+## Technologies Used
 
-## Project structure
+- **HTML5** — webpage structure.
+- **CSS3** — styling and responsive layout.
+- **JavaScript** — task management and application functionality.
+- **Node.js** — running automated tests.
+- **Git and GitHub** — version control and source code hosting.
+- **Jenkins** — Continuous Integration pipeline.
+
+## Project Structure
+
 ```text
-student-task-manager/
+studysprint/
 ├── index.html
 ├── style.css
 ├── script.js
 ├── package.json
 ├── Jenkinsfile
 ├── .gitignore
+├── .gitattributes
 ├── README.md
 ├── tests/
 │   └── app.test.js
 └── screenshots/
-    └── (add your own evidence screenshots here)
+    ├── 01-GitHub-Repository.png
+    ├── 02-GitHub-Commits.png
+    ├── 03-Jenkins-Pipeline-Success.png
+    ├── 04-Jenkins-Console-Output.png
+    └── 05-StudySprint-Website.png
 ```
 
-## Run the website
-1. Download or clone the repository.
-2. Open `index.html` in a browser.
-3. Add a task to verify the basic functionality.
+## How to Run the Website
 
-No server is required for the front-end website.
+1. Clone or download this repository.
+2. Open the project folder.
+3. Open `index.html` in a web browser.
+4. Add a task and test the available features.
 
-## Run automated tests
-Install a current Node.js LTS version. From the project folder, run:
+No web server is required for the basic front-end application.
+
+## Running Automated Tests
+
+Install Node.js first. Open a terminal in the project folder and run:
 
 ```bash
 node --version
 npm test
 ```
 
-The test command uses Node.js's built-in test runner and does not require installing an extra testing package.
+The tests use Node.js's built-in test runner, configured through `package.json`.
 
-## Git and GitHub workflow
-Configure Git once on your computer:
+## Git and GitHub Workflow
 
-```bash
-git config --global user.name "Your Name"
-git config --global user.email "you@example.com"
-```
-
-Initialize and commit the project:
-
-```bash
-git init
-git add .
-git commit -m "Initial StudySprint website"
-git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
-git push -u origin main
-```
-
-Replace the example remote with your own GitHub repository URL. For each meaningful change:
+Check the current Git status:
 
 ```bash
 git status
-git add .
-git commit -m "Describe the actual change"
-git push
 ```
 
-## Suggested meaningful commits
-Make these commits as you implement and verify each change; do not create commits that misrepresent the work.
-
-1. `Initial StudySprint website structure`
-2. `Add responsive styling`
-3. `Implement task management and local storage`
-4. `Add automated task utility tests`
-5. `Add Jenkins CI pipeline and documentation`
-
-## Jenkins CI integration
-The included `Jenkinsfile` defines a pipeline that checks out the repository and runs the automated tests. Configure a Jenkins Pipeline job to use your GitHub repository and the `Jenkinsfile` in the repository root.
-
-1. Install and start Jenkins using the official installation instructions.
-2. Ensure the Jenkins agent has Git and a compatible Node.js installation available.
-3. In Jenkins, create **New Item → Pipeline**.
-4. Under Pipeline, choose **Pipeline script from SCM**.
-5. Select **Git**, enter your repository URL, and select branch `*/main`.
-6. Set Script Path to `Jenkinsfile`, save, and click **Build Now**.
-7. Open the build and inspect **Console Output**. Capture a screenshot of a successful test run for your evidence.
-
-If your Jenkins installation uses a different agent or tool configuration, adjust the Node.js setup accordingly. Do not put credentials or secret tokens in the repository.
-
-## Evidence screenshots to add
-Save your own screenshots in the `screenshots/` folder and update this list with their filenames:
-- `website-desktop.png` — website open in a desktop browser.
-- `website-mobile.png` — responsive website on a narrow/mobile viewport.
-- `github-repository.png` — repository and folder structure.
-- `github-commits.png` — meaningful commit history.
-- `jenkins-success.png` — successful Jenkins pipeline and test output.
-
-Screenshots should be genuine captures of your own work. Do not add placeholder images as evidence.
-
-## DevOps workflow
-1. Developer updates source files.
-2. Git records the changes in commits.
-3. GitHub stores the repository.
-4. Jenkins checks out the latest code.
-5. Jenkins runs automated tests.
-6. The build result helps identify problems before submission.
-
-## Limitations
-- Tasks are stored in the current browser's local storage, not in a shared database.
-- Data does not automatically synchronize between different devices or browsers.
-- Jenkins must be configured and run separately; the pipeline is not active merely because the `Jenkinsfile` exists.
-
-## Academic integrity
-Personalize the design or add a feature of your own, understand the code, and take your own screenshots and commit history. Follow your instructor's rules for individual work.
-
-## Author
-Harsh Divekar
-B.Tech CSE(AIML)
-TY AIML B 
-Roll No. 60
-
-## Features
-
-- Add, complete, and delete student tasks.
-- Organize tasks by subject and priority.
-- Set due dates for assignments.
-- Filter tasks by their status.
-- Track task completion progress.
-- Save tasks in the browser using localStorage.
-
-## Technologies Used
-
-- HTML
-- CSS
-- JavaScript
-- Node.js built-in test runner
-- Jenkins for CI/CD automation
-
-## Testing
-
-Run the automated tests using:
+Add and commit your changes:
 
 ```bash
-npm test
+git add .
+git commit -m "Describe the actual change"
 ```
 
+Push changes to the GitHub repository:
+
+```bash
+git push origin master
+```
+
+Use meaningful commit messages that describe the changes you actually made.
+
+## Jenkins CI Integration
+
+StudySprint uses a `Jenkinsfile` to define a Continuous Integration pipeline that checks out the project and runs automated tests.
+
+### Steps to Configure Jenkins
+
+1. Start Jenkins on your computer.
+2. Ensure Git and Node.js are available to the Jenkins agent.
+3. Open the Jenkins dashboard.
+4. Create a new item named `StudySprint-CI`.
+5. Select **Pipeline** as the job type.
+6. Under Pipeline, select **Pipeline script from SCM**.
+7. Select **Git** and enter the repository URL:
+
+   `https://github.com/Divekarharsh/studysprint.git`
+
+8. Set the branch to `*/master`.
+9. Set Script Path to `Jenkinsfile`.
+10. Save the configuration and click **Build Now**.
+11. Open the build and check the Console Output for the result.
+
+A successful build indicates that the configured pipeline completed successfully. Check the test output to confirm whether the automated tests passed.
+
+## Evidence Screenshots
+
+The `screenshots/` folder contains evidence of the project and its development workflow.
+
+1. `01-GitHub-Repository.png` — GitHub repository and project files.
+2. `02-GitHub-Commits.png` — Git commit history.
+3. `03-Jenkins-Pipeline-Success.png` — successful Jenkins pipeline.
+4. `04-Jenkins-Console-Output.png` — Jenkins build console output.
+5. `05-StudySprint-Website.png` — running StudySprint website.
+
+## DevOps Workflow
+
+1. The developer makes changes to the source code.
+2. Git tracks the changes through commits.
+3. GitHub stores the source code in a remote repository.
+4. Jenkins checks out the latest code.
+5. Jenkins runs the configured automated tests.
+6. The build result helps identify problems during development.
+
+## Limitations
+
+- Tasks are saved in the current browser's local storage.
+- Task data is not automatically synchronized between devices or browsers.
+- The application does not use a shared database or user authentication.
+- Jenkins must be configured separately to run the CI pipeline.
+
+## Future Enhancements
+
+- Add user login and authentication.
+- Store tasks in a database.
+- Add reminders for upcoming deadlines.
+- Synchronize tasks across devices.
+- Add weekly study schedules and reports.
+
+## Author
+
+**Harsh Divekar**  
+B.Tech — Computer Science and Engineering (Artificial Intelligence and Machine Learning)  
+TY-B CSE (AIML)  
+Roll No. 60
+
+## Conclusion
+
+StudySprint provides a simple way for students to organize academic tasks and monitor their progress. The project demonstrates front-end web development, version control using Git and GitHub, automated testing with Node.js, and CI integration using Jenkins.
