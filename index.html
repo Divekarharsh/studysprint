@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple student task planner to organize study tasks and track progress.">
+  <title>StudySprint | Student Task Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="StudySprint home"><span class="brand-mark">S</span> StudySprint</a>
+    <span class="header-note">Small steps. Steady progress.</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">YOUR PERSONAL STUDY SPACE</p>
+        <h1>Make today <span>count.</span></h1>
+        <p class="hero-copy">Plan your study tasks, focus on what matters, and celebrate every completed step.</p>
+      </div>
+      <div class="date-card">
+        <span class="date-label">TODAY</span>
+        <strong id="today-date">Your day</strong>
+        <span class="date-subtitle">One task at a time</span>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Task summary">
+      <article class="stat-card"><span>Total tasks</span><strong id="total-count">0</strong></article>
+      <article class="stat-card"><span>Completed</span><strong id="completed-count">0</strong></article>
+      <article class="stat-card"><span>Still to do</span><strong id="remaining-count">0</strong></article>
+    </section>
+
+    <section class="planner-grid">
+      <section class="panel add-panel">
+        <div class="section-heading">
+          <div><p class="eyebrow">GET IT OUT OF YOUR HEAD</p><h2>Add a task</h2></div>
+        </div>
+        <form id="task-form">
+          <label for="task-title">Task name</label>
+          <input id="task-title" name="title" type="text" maxlength="100" placeholder="e.g. Revise database normalization" required>
+          <div class="form-row">
+            <div class="field">
+              <label for="task-subject">Subject</label>
+              <select id="task-subject" name="subject">
+                <option>General</option><option>DevOps</option><option>Database Engineering</option>
+                <option>Machine Learning</option><option>Programming</option><option>Mathematics</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="task-priority">Priority</label>
+              <select id="task-priority" name="priority">
+                <option value="Normal">Normal</option><option value="High">High</option><option value="Low">Low</option>
+              </select>
+            </div>
+          </div>
+          <label for="task-due">Due date (optional)</label>
+          <input id="task-due" name="due" type="date">
+          <button class="primary-button" type="submit">＋ Add task</button>
+          <p class="form-hint">Your tasks are saved in this browser on this device.</p>
+        </form>
+      </section>
+
+      <section class="panel tasks-panel">
+        <div class="section-heading task-heading">
+          <div><p class="eyebrow">YOUR PLAN</p><h2>Study tasks</h2></div>
+          <label class="filter-label" for="task-filter">Show
+            <select id="task-filter"><option value="all">All</option><option value="active">To do</option><option value="completed">Completed</option></select>
+          </label>
+        </div>
+        <div id="progress-wrap" class="progress-wrap">
+          <div class="progress-copy"><span>Daily progress</span><strong id="progress-text">0%</strong></div>
+          <div class="progress-track"><div id="progress-bar" class="progress-bar"></div></div>
+        </div>
+        <ul id="task-list" class="task-list" aria-live="polite"></ul>
+        <div id="empty-state" class="empty-state">
+          <div class="empty-icon">✓</div><h3>Your plan starts here</h3><p>Add your first task and build momentum.</p>
+        </div>
+        <button id="clear-completed" class="text-button" type="button">Clear completed tasks</button>
+      </section>
+    </section>
+    <p class="footer-note">Built for better study habits · StudySprint</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

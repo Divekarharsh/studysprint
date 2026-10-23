@@ -1,0 +1,9 @@
+{
+  "name": "studysprint",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A responsive student task planner with local storage and automated tests.",
+  "scripts": {
+    "test": "node --test"
+  }
+}
