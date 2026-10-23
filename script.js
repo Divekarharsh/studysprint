@@ -160,6 +160,7 @@ taskForm.addEventListener("submit", (event) => {
 });
 
 filterInput.addEventListener("change", renderTasks);
+searchInput.addEventListener("input", renderTasks);
 
 clearCompletedButton.addEventListener("click", () => {
   tasks = tasks.filter((task) => !task.completed);
