@@ -135,4 +135,33 @@ Screenshots should be genuine captures of your own work. Do not add placeholder 
 Personalize the design or add a feature of your own, understand the code, and take your own screenshots and commit history. Follow your instructor's rules for individual work.
 
 ## Author
-Add your name, class, roll number if required by your instructor, and submission date here.
+Harsh Divekar
+B.Tech CSE(AIML)
+TY AIML B 
+Roll No. 60
+
+## Features
+
+- Add, complete, and delete student tasks.
+- Organize tasks by subject and priority.
+- Set due dates for assignments.
+- Filter tasks by their status.
+- Track task completion progress.
+- Save tasks in the browser using localStorage.
+
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+- Node.js built-in test runner
+- Jenkins for CI/CD automation
+
+## Testing
+
+Run the automated tests using:
+
+```bash
+npm test
+```
+
