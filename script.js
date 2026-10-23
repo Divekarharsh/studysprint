@@ -32,6 +32,7 @@ const dueInput = document.querySelector("#task-due");
 const taskList = document.querySelector("#task-list");
 const emptyState = document.querySelector("#empty-state");
 const filterInput = document.querySelector("#task-filter");
+const searchInput = document.querySelector("#task-search");
 const clearCompletedButton = document.querySelector("#clear-completed");
 
 let tasks = loadTasks();
@@ -120,11 +121,20 @@ function makeTaskElement(task) {
 }
 
 function renderTasks() {
+  function renderTasks() {
   const filter = filterInput.value;
+  const search = searchInput.value.trim().toLowerCase();
+
   const visibleTasks = tasks.filter((task) => {
-    if (filter === "active") return !task.completed;
-    if (filter === "completed") return task.completed;
-    return true;
+    const matchesFilter =
+      filter === "active" ? !task.completed :
+      filter === "completed" ? task.completed : true;
+
+    const matchesSearch =
+      task.title.toLowerCase().includes(search) ||
+      task.subject.toLowerCase().includes(search);
+
+    return matchesFilter && matchesSearch;
   });
 
   taskList.replaceChildren(...visibleTasks.map(makeTaskElement));
