@@ -122,11 +122,16 @@ A successful build indicates that the configured pipeline completed successfully
 
 The `screenshots/` folder contains evidence of the project and its development workflow.
 
-1. `01-GitHub-Repository.png` — GitHub repository and project files.
-2. `02-GitHub-Commits.png` — Git commit history.
-3. `03-Jenkins-Pipeline-Success.png` — successful Jenkins pipeline.
-4. `04-Jenkins-Console-Output.png` — Jenkins build console output.
-5. `05-StudySprint-Website.png` — running StudySprint website.
+1. `01-GitHub-Repository.png` <img width="1920" height="1080" alt="01-GitHub-Repository" src="https://github.com/user-attachments/assets/2713a53c-da0b-4070-b743-b1c1da3759f8" />
+ — GitHub repository and project files.
+2. `02-GitHub-Commits.png` <img width="1920" height="1080" alt="02-GitHub-Commits" src="https://github.com/user-attachments/assets/20b947cf-8ec2-49fc-90e2-c3a53bfc4e6a" />
+ — Git commit history.
+3. `03-Jenkins-Pipeline-Success.png` <img width="1920" height="1080" alt="03-Jenkins-Pipeline-Success" src="https://github.com/user-attachments/assets/f5feb2dc-59fb-4f6c-b864-26a281ed4050" />
+ — successful Jenkins pipeline.
+4. `04-Jenkins-Console-Output.png`<img width="1920" height="1080" alt="04-Jenkins-Console-Output" src="https://github.com/user-attachments/assets/c8b9f60c-ee3a-4e0d-b49c-ed1d320e37fb" />
+— Jenkins build console output.
+5. `05-StudySprint-Website.png` <img width="1920" height="1080" alt="05-StudySprint-Website" src="https://github.com/user-attachments/assets/92112c9b-f2c9-4945-83e3-e4794b2319ac" />
+ — running StudySprint website.
 
 ## DevOps Workflow
 
