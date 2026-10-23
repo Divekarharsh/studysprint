@@ -10,24 +10,30 @@ pipeline {
 
         stage('Check Node.js') {
             steps {
-                sh 'node --version'
-                sh 'npm --version'
+                bat 'node --version'
+                bat 'npm --version'
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                bat 'npm install'
             }
         }
 
         stage('Run Automated Tests') {
             steps {
-                sh 'npm test'
+                bat 'npm test'
             }
         }
     }
 
     post {
         success {
-            echo 'StudySprint checks and tests completed successfully.'
+            echo 'StudySprint pipeline completed successfully!'
         }
         failure {
-            echo 'The pipeline failed. Review the console output and fix the reported issue.'
+            echo 'Pipeline failed. Check the console output.'
         }
     }
 }
